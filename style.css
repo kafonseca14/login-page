@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    color: white;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #0A0A10;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 414px;
+    min-height: 100vh;
+    padding: 15px 0;
+    text-align: center;
+    position: relative;
+}
+
+.man-img {
+    width: 100%;
+}
+
+.blur {
+    width: 100%;
+    height: 280px;
+    background-color: #fff;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.25;
+    filter: blur(24px);
+    border-radius: 128px;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 32.81px;
+}
+
+.container-inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    text-align: left;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.408px;
+    color: rgb(255, 255, 255, 0.6);
+}
+
+input {
+    width: 100%;
+    height: 42px;
+    margin-bottom: 10px;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.6);
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+}
+
+button {
+    width: 100%;
+    height: 68px;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 2px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button:active {
+    opacity: 0.6;
+}
+
+
+.btn-login {
+    background-color: #D93856;
+    margin-top: 20px;
+}
+
+.btn-google {
+    background: #FFFFFF24;
+    margin-bottom: 20px;
+}
+
+.container-link {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    background-color: #D93856;
+    transition: 0.3s ease;
+}
+
+a:hover::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #D93856;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+}
+
+span {
+    color: rgb(255, 255, 255, 0.6);
+}
+
+/*Responsividade*/
+
+@media screen and (max-width: 900px) {
+    main {
+        width: 100%;
+        margin-top: 55px;
+        padding: 29px;
+    }
+
+    .blur {
+        width: 90%;
+    }
+}
